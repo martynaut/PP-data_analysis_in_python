@@ -1,2 +1,2 @@
 print ('Hello world')
-print ('Tworzymy konflikty')
+print ('Because FU thats why!')
