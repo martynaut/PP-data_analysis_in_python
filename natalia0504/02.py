@@ -1,3 +1,4 @@
+
 """
 Zadanie 1.1.
 Otwórz projekt w PyCharm i stwórz plik seriale.py
@@ -129,4 +130,9 @@ Sprawdź, który znak w ciągu "Ala ma 4 koty" jest liczbą.
 for i in "ala ma 4 koty":
     if(i<"a"):
         print(i)
+
+
+print("kupa")
+
+#kupa
 
