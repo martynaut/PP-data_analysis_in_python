@@ -131,6 +131,8 @@ for i in "ala ma 4 koty":
     if(i<"a"):
         print(i)
 
-print("dupa z uszami")
 
+print("kupa")
+
+#kupa
 
