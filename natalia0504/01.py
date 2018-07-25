@@ -1,17 +1,4 @@
-"""
-Zadanie 1.1.
-Otwórz projekt w PyCharm i stwórz plik seriale.py
 
-W skrypcie stwórz zmienną o nazwie seriale.
-
-Przypisz do niej listę zawierającą tytuły seriali (min. 8)
-Wypisz pierwszy serial na liście
-Wypisz 7 serial na liście
-Wypisz ostatni serial na liście
-Wypisz pierwsze cztery seriale na liście
-Wypisz cztery ostatnie seriale na liście
-Wypisz seriale na pozycjach od 4 do 7
-"""
 
 seriale=["breaking bad","star trek","battlestar","doctor who","expanse","narcos","broadchurch","family guy"]
 
