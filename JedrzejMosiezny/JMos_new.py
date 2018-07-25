@@ -1,5 +1,7 @@
-#for conflict testing
-print("This is war")
+def add(*args):
+    return sum(*args)
 
-#conflict testing
-print("try this")
+argumenty = (1, 1, 1)
+wynik = add(argumenty)
+
+print(wynik)
