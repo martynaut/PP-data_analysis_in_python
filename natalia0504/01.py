@@ -1,3 +1,3 @@
-print("dupa")
+print("dupa z uszami")
 
 #dupa
