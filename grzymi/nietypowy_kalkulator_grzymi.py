@@ -31,5 +31,4 @@ print('Podaj liczby, na ktorych chcesz wykonac operacje:')
 argumenty = input()
 
 
-
 print (calc(argumenty,funkcja=funkcja))
