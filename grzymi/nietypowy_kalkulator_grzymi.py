@@ -1,25 +1,13 @@
-def suma(*args):
-    s = sum(args)
-    return s
-
-def srednia(*args):
-    av = sum(args)/len(args)
-    return av
-
-def minimum(*args):
-    mini = min(args)
-    return mini
+import funkcje_kalkulatora as fk
 
 def calc(*args, funkcja='suma'):
     if funkcja=='srednia':
-        return srednia(*args)
+        return fk.srednia(*args)
     elif funkcja=='minimum':
-        return minimum(*args)
+        return fk.minimum(*args)
     else:
-        return suma(*args)
+        return fk.suma(*args)
 
-#argumetny = ()
-#while argumenty!='end':
 print ('Wybierz funkcje. Do wyboru masz: suma, srednia, minimum:')
 funkcja = str(input())
 f_lista = ('', 'suma', 'srednia', 'minimum')
@@ -27,9 +15,23 @@ while funkcja not in f_lista:
     funkcja = str(input('Podaj prawidlowa nazwe funkcji: suma, srednia, minimum:'))
 if funkcja == '':
     funkcja = 'suma'
-print('Podaj liczby, na ktorych chcesz wykonac operacje:')
-argumenty = input()
 
 
+argumenty = []
+argument = 0
+while argument!='end':
+    print('Podaj liczby, na ktorych chcesz wykonac operacje:')
+    argument = input()
+    if argument == 'end':
+        break
+    else:
+        try:
+            argument = float(argument)
+            argumenty.append(argument)
+        except ValueError:
+            print ('Podales zmienna innego typu niz oczekiwana.')
+
+argumenty = tuple(argumenty)
+print(argumenty)
 
 print (calc(argumenty,funkcja=funkcja))
