@@ -19,8 +19,7 @@ elif funkcja == '':
 
 print("Podaj argumenty funkcji, zakoncz argumentem end")
 argumenty = []
-argument = 0
-
+argument - 0
 while argument != 'end':
     argument = input()
     if argument == 'end':
