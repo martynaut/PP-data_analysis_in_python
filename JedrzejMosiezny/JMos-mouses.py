@@ -12,20 +12,20 @@ mouse[mouse_obj.columns] = mouse_obj.apply(lambda x: x.str.strip())
 pprint(mouse) #sprawdzenie nowej struktury tabeli
 
 mouse_age_mean = mouse['age'].mean()
-pprint("Sredni wiek myszy: " + str(mouse_age_mean)) #średni wiek
+print("Sredni wiek myszy: " + str(mouse_age_mean)) #średni wiek
 
 mouse_brainwt_max = mouse['brainwt'].max()
-pprint("Maksymalna waga mozgu myszy: " + str(mouse_brainwt_max)) #maksymalny brainwt
+print("Maksymalna waga mozgu myszy: " + str(mouse_brainwt_max)) #maksymalny brainwt
 
 mouse_1709_sex = mouse.loc[1709,'sex']
-pprint("Plec myszy 1709: " + str(mouse_1709_sex)) #płeć myszy 1709
+print("Plec myszy 1709: " + str(mouse_1709_sex)) #płeć myszy 1709
 
 mouse_max_bodywt = mouse['bodywt'][mouse['bodywt'] == mouse['bodywt'].max()] 
-pprint("Indeks najcięższej myszy: " + str(mouse_max_bodywt.index.values[0])) #maksymalna waga myszy
+print("Indeks najcięższej myszy: " + str(mouse_max_bodywt.index.values[0])) #maksymalna waga myszy
 
 mouse_sex_count = mouse['sex'].value_counts()
-pprint("Jest " + str(mouse_sex_count[0]) + " samcow") #rozkład płci
-pprint("Jest " + str(mouse_sex_count[1]) + " samic") #rozkład płci
+print("Jest " + str(mouse_sex_count[0]) + " samcow") #rozkład płci
+print("Jest " + str(mouse_sex_count[1]) + " samic") #rozkład płci
 
 strain_mouse = np.array(mouse['Strain'].unique())
 print("Jest: " + str(strain_mouse.size) + " typow myszy")
