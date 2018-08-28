@@ -1,8 +1,12 @@
 import pandas as pd
 import os
 import time
+import zipfile
 
 start = time.time()
+
+with zipfile.ZipFile("data.zip","r") as zip_ref:
+    zip_ref.extractall(".")
 
 FOLDER_WITH_DATA = '.'
 files = os.walk(FOLDER_WITH_DATA)
@@ -37,9 +41,10 @@ for x in poziom(1):
     ave = df.tail(10).mean(axis=0)
     total = total.append(ave, ignore_index=True)
 
-print(total)
+
+print(total.set_index(poziom(1)))
 
 end = time.time()
-print('Czas działania programu = ', end-start, 's')
+print('Czas działania programu = ', round((end-start)*1000,4), 'ms')
 
 #https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.append.html
