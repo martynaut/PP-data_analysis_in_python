@@ -3,7 +3,7 @@ import sys
 
 
 tracker_types = ['BOOSTING', 'MIL', 'KCF', 'TLD', 'MEDIANFLOW', 'GOTURN', 'MOSSE', 'CSRT']
-tracker_type = tracker_types[0]
+tracker_type = tracker_types[1]
 
 if tracker_type == 'BOOSTING':
     tracker = cv2.TrackerBoosting_create()
@@ -34,16 +34,17 @@ if not ret:
 bbox = cv2.selectROI(frame, False)
 
 ret = tracker.init(frame, bbox)
+print('tracer initiated')
 i = 1
 while True:
-    if i < 7:
-        continue
-    i += 1
     ret, frame = video.read()
     if not ret:
         break
     timer = cv2.getTickCount()
+    print(str(i) + ' frame before')
     ret, bbox = tracker.update(frame)
+    print(bbox)
+    print(str(i) + ' frame updated')
     fps = cv2.getTickFrequency() / (cv2.getTickCount() - timer);
     if ret:
         p1 = (int(bbox[0]), int(bbox[1]))
