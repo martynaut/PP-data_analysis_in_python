@@ -13,7 +13,7 @@ while (cap.isOpened()):
     ret, frame = cap.read()
     if ret == True:
         frame = cv2.GaussianBlur(frame, (kernelSize, kernelSize), 0, 0)
-        frame = cv2.Canny(frame, parameter1, parameter2, intApertureSize)
+        # frame = cv2.Canny(frame, parameter1, parameter2, intApertureSize)
         cv2.imshow('Grey', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break

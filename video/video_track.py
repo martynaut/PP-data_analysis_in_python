@@ -22,6 +22,7 @@ while (True):
             img3, contours, hierarchy = cv2.findContours(thresh, cv2.RETR_TREE, cv2.CHAIN_APPROX_NONE)
             if len(contours) != 0:
                 for c in contours:
+                    print(c)
                     rect = cv2.boundingRect(c)
                     height, width = img3.shape[:2]
                     if rect[2] > 0.2 * height and rect[2] < 0.7 * height and rect[3] > 0.2 * width and rect[3] < 0.7 * width:

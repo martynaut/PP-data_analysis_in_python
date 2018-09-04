@@ -32,6 +32,7 @@ if not ret:
     sys.exit()
 
 bbox = cv2.selectROI(frame, False)
+print(bbox)
 
 ret = tracker.init(frame, bbox)
 print('tracer initiated')

@@ -1,4 +1,5 @@
 import cv2
+from time import sleep
 
 alpha = 0.999
 isFirstTime = True
@@ -23,6 +24,7 @@ while (True):
             cv2.imshow('Video Capture', frame)
             cv2.imshow('Background', bg_img)
             cv2.imshow('Foreground', fg_img)
+            sleep(0.5)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

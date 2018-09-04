@@ -9,6 +9,7 @@ while(cap.isOpened()):
     ret, frame = cap.read()
     if type(frame) != type(None):
         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+        print(frame.shape)
         plt.imshow(image)
         plt.show()
     else:
